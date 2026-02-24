@@ -1,0 +1,84 @@
+<!--Campo de interação-->
+    <h2>Soma de Dois Números</h2>
+
+    <input type="number" id="num1" placeholder="Digite o primeiro número">
+    <br><br>
+
+    <input type="number" id="num2" placeholder="Digite o segundo número">
+    <br><br>
+
+    <button onclick="calcularSoma()">Somar</button>
+    <button onclick="calcularMultiplicacao()">Multiplicar</button>
+    <button onclick="calcularDivisao()">Dividir</button>
+    <button onclick="calcularSubtracao()">Subtrair</button>
+
+    <p id="resultado"></p>
+    <br>
+    <br>
+
+
+<!--Bloco JavaScript-->
+<script>
+     function somar(a, b) {
+            return a + b;
+        }
+
+        function calcularSoma() {
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+
+            let resultado = somar(n1, n2);
+
+            document.getElementById("resultado").innerText =
+                "Resultado da soma: " + resultado;
+        }
+</script>
+
+<script>
+     function multiplicar(a, b) {
+            return a * b;
+        }
+
+        function calcularMultiplicacao() {
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+
+            let resultado = multiplicar(n1, n2);
+            document.getElementById("resultado").innerText =
+                "Resultado da multiplicação: " + resultado;
+        }
+</script>
+
+<script>
+     function dividir(a, b) {
+            if (b === 0) {
+                return "Erro: Divisão por zero não é permitida.";
+            }
+            return a / b;
+        }
+
+        function calcularDivisao() {
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+
+            let resultado = dividir(n1, n2);
+            document.getElementById("resultado").innerText =
+                "Resultado da divisão: " + resultado;
+        }
+</script>
+
+<script>
+     function subtrair(a, b) {
+            return a - b;
+        }
+
+        function calcularSubtracao() {
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+
+            let resultado = subtrair(n1, n2);
+            document.getElementById("resultado").innerText =
+                "Resultado da subtração: " + resultado;
+        }
+
+</script>
