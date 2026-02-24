@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Contador de Vogais</h3>
+<input type="text" id="texto" placeholder="Digite algo">
+<button onclick="mostrarResultado()">Contar Vogais</button>
+
+<p id="resultado"></p>
+
+<script>
+function contarVogais(texto) {
+  let vogais = 'aeiouAEIOU';
+  let contador = 0;
+  for (let i = 0; i < texto.length; i++) {
+    if (vogais.includes(texto[i])) {
+      contador++;
+    }
+  }
+  return contador;
+}
+
+function mostrarResultado() {
+  let texto = document.getElementById("texto").value;
+  let total = contarVogais(texto);
+  document.getElementById("resultado").innerHTML = "Total de vogais: " + total;
+}
+</script>
+
+</body>
+</html>

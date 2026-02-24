@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Filtrar Números Pares</h3>
+<input type="text" id="numeros" placeholder="Ex: 1,2,3,4,5,6">
+<button onclick="mostrarPares()">Mostrar Pares</button>
+
+<p id="resultado"></p>
+
+<script>
+function filtrarPares(array) {
+  let pares = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      pares.push(array[i]);
+    }
+  }
+  return pares;
+}
+
+function mostrarPares() {
+  let texto = document.getElementById("numeros").value;
+  let numeros = texto.split(",").map(Number);
+  let pares = filtrarPares(numeros);
+  document.getElementById("resultado").innerHTML = "Pares: " + pares.join(", ");
+}
+</script>
+
+</body>
+</html>
